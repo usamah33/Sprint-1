@@ -17,6 +17,10 @@ class Insert extends CI_Controller{
 		$this->load->view('index');
 	}
 
+	function tambah_data(){
+		$this->load->view('v_input');
+	}
+
 	function tambah_aksi(){
 		$from = $this->input->post('from');
 		$to = $this->input->post('to');

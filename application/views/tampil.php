@@ -13,6 +13,7 @@
 	</style>
 </head>
 <body>
+	<center><a href="'<?php echo base_url(('insert/tambah_data/')); ?>'">Tambah data</a></center>
 	<table style="margin:20px auto;" border="1">
 		<tr>
 			<th>No</th>

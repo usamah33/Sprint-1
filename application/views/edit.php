@@ -9,7 +9,7 @@
 <html>
 <head>
 	<title>Flight Ticket Booking a Flat Responsive Widget Template :: w3layouts</title>
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/style.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>gudang/css/style.css">
 	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 	<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />

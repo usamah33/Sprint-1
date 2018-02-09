@@ -40,9 +40,6 @@
         <li id="menu_active"><a href="index.php"><span><span>About</span></span></a></li>
         <li><a href="gudang/frontend/offers.php"><span><span>Offers</span></span></a></li>
         <li><a href="gudang/frontend/book.php"><span><span>Book</span></span></a></li>
-        <li><a href="gudang/frontend/services.php"><span><span>Services</span></span></a></li>
-        <li><a href="gudang/frontend/safety.php"><span><span>Safety</span></span></a></li>
-        <li class="end"><a href="gudang/frontend/contacts.php"><span><span>Contacts</span></span></a></li>
       </ul>
     </nav>
   </header>
@@ -55,6 +52,8 @@
           <ul class="nav">
             <li class="selected"><a href="#Flight">Flight</a></li>
           </ul>
+
+
           <div class="content">
             <div class="tab-content" id="Flight">
               <form id="form_1" action="#" method="post">
@@ -81,14 +80,21 @@
                     <input type="text" class="input2" value="0"  onblur="if(this.value=='') this.value='0'" onFocus="if(this.value =='0' ) this.value=''">
                     <span class="pad_left1">(0-11 years)</span> </div>
                   <div class="wrapper"> <span class="right relative"><a href="#" class="button1"><strong>Search</strong></a></span> <a href="#" class="link1">More Options</a> </div>
+                <div class="row"> <span class="left">Seat</span>
+                  <input type="text" class="input1">
+                </div>
                 </div>
               </form>
             </div>
           </div>
+
+
         </div>
       </article>
+
       <div id="slider"> <img src="gudang/frontend/images/banner1.jpg" alt=""> <img src="gudang/frontend/images/banner2.jpg" alt=""> <img src="gudang/frontend/images/banner3.jpg" alt=""> </div>
     </div>
+
   </section>
   <!--content end-->
   <!--footer -->
