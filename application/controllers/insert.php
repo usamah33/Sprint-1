@@ -13,12 +13,12 @@ class Insert extends CI_Controller{
 		$this->load->view('tampil', $data);
 	}
 
-	function index(){
-		$this->load->view('index');
+	function v_input(){
+		$this->load->view('v_input');
 	}
 
-	function tambah_data(){
-		$this->load->view('v_input');
+	function index(){
+		$this->load->view('index');
 	}
 
 	function tambah_aksi(){
@@ -40,7 +40,28 @@ class Insert extends CI_Controller{
 	function hapus($id){
 		$where = array('ruteid' => $id);
 		$this->crud_m->hapus_record($where, 'rute');
-		redirect('insert/tampil');
+		redirect('index.php/insert/tampil');
+	}
+
+	function tambah(){
+		$ruteid = $this->input->post('ruteid');
+		$rute_from = $this->input->post('rute_from');
+		$rute_to = $this->input->post('rute_to');
+		$depart_at = $this->input->post('depart_at');
+		$price = $this->input->post('price');
+		$transportid = $this->input->post('transportid');
+		$data = array(
+			'rute_from' => $rute_from,
+			'rute_to' => $rute_to,
+			'depart_at' => $depart_at,
+			'price' => $price,
+			'transportid' => $transportid
+		);
+		$where = array(
+			'ruteid' => $ruteid
+		);
+		$this->crud_m->tambah_data($where, $data, 'rute');
+		redirect('index.php/insert/tampil');
 	}
 
 	function edit_rute($id){
@@ -51,21 +72,23 @@ class Insert extends CI_Controller{
 
 	function update_rute(){
 		$ruteid = $this->input->post('ruteid');
-		$from = $this->input->post('from');
-		$to = $this->input->post('to');
-		$depart_on = $this->input->post('depart');
-		$price = $this->input->post('prices');
+		$rute_from = $this->input->post('rute_from');
+		$rute_to = $this->input->post('rute_to');
+		$depart_at = $this->input->post('depart_at');
+		$price = $this->input->post('price');
+		$transportid = $this->input->post('transportid');
 		$data = array(
-			'rute_from' => $from,
-			'rute_to' => $to,
-			'depart_on' => $depart_on,
-			'price' => $price
+			'rute_from' => $rute_from,
+			'rute_to' => $rute_to,
+			'depart_at' => $depart_at,
+			'price' => $price,
+			'transportid' => $transportid
 		);
 		$where = array(
 			'ruteid' => $ruteid
 		);
 		$this->crud_m->update_datarute($where, $data, 'rute');
-		redirect('insert/tampil');
+		redirect('index.php/insert/tampil');
 	}
 }
 ?>

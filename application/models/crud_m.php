@@ -8,6 +8,11 @@ class crud_m extends CI_Model{
 		$this->db->insert($table, $data);
 	}
 
+	function tambah_data($where, $data, $table){	
+		$this->db->where($where);
+		$this->db->insert($table, $data);
+	}
+
 	function hapus_record($where, $table){
 		$this->db->where($where);
 		$this->db->delete($table);

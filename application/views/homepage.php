@@ -38,8 +38,7 @@
     <nav>
       <ul id="menu">
         <li id="menu_active"><a href="index.php"><span><span>About</span></span></a></li>
-        <li><a href="gudang/frontend/offers.php"><span><span>Offers</span></span></a></li>
-        <li><a href="gudang/frontend/book.php"><span><span>Book</span></span></a></li>
+        <li><a href="book.php"><span><span>Book</span></span></a></li>
       </ul>
     </nav>
   </header>

@@ -13,7 +13,7 @@
 	</style>
 </head>
 <body>
-	<center><a href="'<?php echo base_url(('insert/tambah_data/')); ?>'">Tambah data</a></center>
+	<center><a style="cursor: pointer;" onclick="href='<?php echo base_url('index.php/insert/v_input/'); ?>'">Tambah Data</a></center>
 	<table style="margin:20px auto;" border="1">
 		<tr>
 			<th>No</th>
@@ -34,8 +34,8 @@
 				<td><?php echo $r->depart_at ?></td>
 				<td><?php echo $r->price ?></td>
 				<td>
-					<a style="cursor: pointer;" onclick="href='<?php echo base_url(('insert/edit_rute/'. $r->ruteid)); ?>'">Edit</a>
-					<a style="cursor: pointer;" onclick="href='<?php echo base_url(('insert/hapus/'. $r->ruteid)); ?>'">Remove</a>
+					<a style="cursor: pointer;" onclick="href='<?php echo base_url(('index.php/insert/edit_rute/'. $r->ruteid)); ?>'">Edit</a>
+					<a style="cursor: pointer;" onclick="href='<?php echo base_url(('index.php/insert/hapus/'. $r->ruteid)); ?>'">Remove</a>
 				</td>
 			</tr>
 			<?php } ?>
