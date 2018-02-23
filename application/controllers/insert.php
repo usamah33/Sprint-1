@@ -67,7 +67,7 @@ class Insert extends CI_Controller{
 	function edit_rute($id){
 		$where = array ('ruteid' => $id);
 		$data['rute'] = $this->crud_m->edit_datarute($where, 'rute')->result();
-		$this->load->view('edit', $data);
+		$this->load->view('v_edit', $data);
 	}
 
 	function update_rute(){
