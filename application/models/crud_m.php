@@ -4,6 +4,10 @@ class crud_m extends CI_Model{
 		return $this->db->get('rute');
 	}
 
+	function tampil_data_user() {
+		return $this->db->get('user');
+	}
+
 	function input_data($data, $table){
 		$this->db->insert($table, $data);
 	}

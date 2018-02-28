@@ -341,8 +341,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="../gudang/admin/index.html"><i class="fa fa-circle-o"></i> Departure Schedule List</a></li>
-            <li><a href="../gudang/admin/index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li class="active"><a href="<?php echo base_url("index.php/admin"); ?>"><i class="fa fa-circle-o"></i> Departure Schedule List</a></li>
+            <li><a href="<?php echo base_url("index.php/insert/departlist"); ?>"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
           </ul>
         <li class="header">LABELS</li>
         <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
@@ -385,7 +385,7 @@
             </div>
             
             <div class="box-body">
-              <form action="<?php echo base_url('index.php/insert/tambah') ; ?>" method="post">
+              <form action="<?php echo base_url('index.php/insert/tambah'); ?>" method="post">
                 <div class="form-group">
                   <input type="text" class="form-control" name="rute_from" placeholder="Departure Place">
                 </div>
@@ -401,11 +401,10 @@
                  <div class="form-group">
                   <input type="text" class="form-control" name="transportid" placeholder="Transport ID">
                 </div>
-              </form>
+                <div class="box-footer clearfix">
+                  <input type="submit" class="pull-right btn btn-default" value="Insert">
             </div>
-            <div class="box-footer clearfix">
-              <input type="submit" class="pull-right btn btn-default" value="Insert">
-                <i class="fa fa-arrow-circle-right"></i>
+              </form>
             </div>
           </div>
 

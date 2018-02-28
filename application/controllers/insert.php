@@ -8,9 +8,16 @@ class Insert extends CI_Controller{
 		$this->load->helper('url');
 	}
 
+	//Function for Rute Table
+
 	function tampil(){
 		$data['rute'] = $this->crud_m->tampil_data()->result();
 		$this->load->view('tampil', $data);
+	}
+
+	function departlist(){
+		$data['rute'] = $this->crud_m->tampil_data()->result();
+		$this->load->view('index2', $data);
 	}
 
 	function v_input(){
@@ -19,6 +26,11 @@ class Insert extends CI_Controller{
 
 	function index(){
 		$this->load->view('index');
+	}
+
+	function book(){
+		$data['rute'] = $this->crud_m->tampil_data()->result();
+		$this->load->view('book', $data);
 	}
 
 	function tambah_aksi(){
@@ -61,7 +73,7 @@ class Insert extends CI_Controller{
 			'ruteid' => $ruteid
 		);
 		$this->crud_m->tambah_data($where, $data, 'rute');
-		redirect('index.php/insert/tampil');
+		redirect('index.php/insert/departlist');
 	}
 
 	function edit_rute($id){
@@ -88,7 +100,7 @@ class Insert extends CI_Controller{
 			'ruteid' => $ruteid
 		);
 		$this->crud_m->update_datarute($where, $data, 'rute');
-		redirect('index.php/insert/tampil');
+		redirect('index.php/insert/departlist');
 	}
 }
 ?>

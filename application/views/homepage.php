@@ -38,7 +38,7 @@
     <nav>
       <ul id="menu">
         <li id="menu_active"><a href="index.php"><span><span>About</span></span></a></li>
-        <li><a href="book.php"><span><span>Book</span></span></a></li>
+        <li><a href="<?php echo base_url('index.php/insert/book'); ?>"><span><span>Book</span></span></a></li>
       </ul>
     </nav>
   </header>

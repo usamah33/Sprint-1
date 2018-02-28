@@ -1057,3 +1057,6 @@ a.jqTransformSelectOpen {
 	margin:0;
 	float:left
 }
+.table {
+	margin-left: 1000px !important;
+}
