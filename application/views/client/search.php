@@ -1,9 +1,9 @@
   <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-    <a class="navbar-brand" href="<?php echo site_url('client');?>"><h2><i class="fa fa-map"></i> travelON</h2></a>
+    <a class="navbar-brand" href="<?php echo site_url('index.php/client');?>"><h2><i class="fa fa-map"></i> travelON</h2></a>
     <ul class="navbar-nav ml-auto">
       <?php if (isset($datasession['username'])):?>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo site_url('admin');?>">
+        <a class="nav-link" href="<?php echo site_url('index.php/admin');?>">
           <i class="fa fa-user"></i> <b><?php echo $datasession['fullname'];?></b>
         </a>
       </li>
@@ -18,7 +18,7 @@
         </li>
       <?php else:?>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo site_url('admin');?>">
+        <a class="nav-link" href="<?php echo site_url('index.php/admin');?>">
           <i class="fa fa-sign-in-alt"></i> <b>Login</b>
         </a>
       </li>
@@ -35,7 +35,7 @@
     </ul>
   </nav>
   <div class="container bg-light">
-    <form class="form-inline" action="<?php echo site_url('client/search');?>" method="get">
+    <form class="form-inline" action="<?php echo site_url('index.php/client/search');?>" method="get">
       <div class="form-group">
         <label>From:</label>
         <select class="form-control" name="from">
@@ -80,7 +80,7 @@
     </form>
   </div>
   <div class="container bg-light">
-    <?php if (isset($dataget[0]->id)):?>
+    <?php if (isset($dataget[0]->ruteid)):?>
     <table class="table" 
       <?php
       if (count($dataget) < 2) echo "style='margin-bottom: 19.5%;'";
@@ -98,7 +98,7 @@
         <?php foreach ($dataget as $d):?>
            <tr>
             <td>
-              <img src="<?php echo base_url('sauce/image/').'plane-logo-'.$d->transportation_typeid.'.png';?>" height="100px">
+              <img src="<?php echo base_url('sauce/image/').'plane-logo-'.$d->transport_typeid.'.png';?>" height="100px">
             </td>
             <td>
               <?php echo $d->code;?>
@@ -121,7 +121,7 @@
               <b>Rp <?php echo number_format(intval($d->price), 0, ",", ".");?></b>
             </td>
             <td>
-              <a class="btn btn-success" href="<?php echo site_url('client/book/').$d->id."/".$datainput['passengers']."/1";?>"><b>Book Now</b> <i class="fas fa-angle-double-right"></i></a>
+              <a class="btn btn-success" href="<?php echo site_url('index.php/client/book/').$d->ruteid."/".$datainput['passengers']."/1";?>"><b>Book Now</b> <i class="fas fa-angle-double-right"></i></a>
             </td>
            </tr>
         <?php endforeach;?>

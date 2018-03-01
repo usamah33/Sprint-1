@@ -1,15 +1,15 @@
   <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-    <a class="navbar-brand" href="<?php echo site_url('client');?>"><h2><i class="fa fa-map"></i> travelON</h2></a>
+    <a class="navbar-brand" href="<?php echo site_url('index.php/client');?>"><h2><i class="fa fa-map"></i> travelON</h2></a>
     <ul class="navbar-nav ml-auto">
       <?php if (isset($datasession['username'])):?>
         <li class="nav-item">
-        <a class="nav-link" href="<?php echo site_url('admin');?>">
+        <a class="nav-link" href="<?php echo site_url('index.php/admin');?>">
           <i class="fa fa-user"></i> <?php echo $datasession['fullname'];?>
         </a>
       </li>
       <?php else:?>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo site_url('admin');?>">
+        <a class="nav-link" href="<?php echo site_url('index.php/admin');?>">
           <i class="fa fa-sign-in-alt"></i> Login
         </a>
       </li>

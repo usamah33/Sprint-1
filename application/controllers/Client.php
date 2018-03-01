@@ -60,6 +60,8 @@ class Client extends CI_Controller {
 			'datarute' => $datarute
 		);
 
+		//print_r($dataget);
+
 		$this->load->view('client/header');
 		$this->load->view('client/search', $data);
 		$this->load->view('client/footer');

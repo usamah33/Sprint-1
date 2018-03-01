@@ -1,9 +1,9 @@
   <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-    <a class="navbar-brand" href="<?php echo site_url('client');?>"><h2><i class="fas fa-map"></i> travelON</h2></a>
+    <a class="navbar-brand" href="<?php echo site_url('index.php/client');?>"><h2><i class="fas fa-map"></i> travelON</h2></a>
     <ul class="navbar-nav ml-auto">
       <?php if (isset($datasession['username'])):?>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo site_url('login');?>">
+        <a class="nav-link" href="<?php echo site_url('index.php/login');?>">
           <i class="fas fa-user"></i> <b><?php echo $datasession['fullname'];?></b>
         </a>
       </li>
@@ -18,7 +18,7 @@
       </li>
       <?php else:?>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo site_url('index.php/login');?>">
+        <a class="nav-link" href="<?php echo site_url('index.php/index.php/login');?>">
           <i class="fas fa-sign-in-alt"></i> <b>Login</b>
         </a>
       </li>
@@ -72,7 +72,7 @@
   </div>
   <div class="container-fluid bg-primary" style="padding: 36px 72px 36px 72px;">
     <?php if (isset($datasession['username'])):?>
-    <form class="form-inline text-light" action="<?php echo site_url('client/search')?>" method="get">
+    <form class="form-inline text-light" action="<?php echo site_url('index.php/client/search')?>" method="get">
       <div class="form-group">
         <label>From:</label>
         <select class="form-control width-index" name="from">
@@ -110,8 +110,8 @@
       <div style="color: #fff;">
         <p>Please login first or sign up now!</p>
       </div>
-      <a class="btn btn-light" href="<?php echo site_url('login')?>" style="margin: 0px 12px; width: 11%;"><i class="fas fa-sign-in-alt"></i> <b>Login</b></a>
-      <a class="btn btn-light" href="<?php echo site_url('login/signup')?>" style="margin: 0px 12px; width: 11%;"><i class="fas fa-user-plus"></i> <b>Sign Up</b></a>
+      <a class="btn btn-light" href="<?php echo site_url('index.php/login')?>" style="margin: 0px 12px; width: 11%;"><i class="fas fa-sign-in-alt"></i> <b>Login</b></a>
+      <a class="btn btn-light" href="<?php echo site_url('index.php/login/signup')?>" style="margin: 0px 12px; width: 11%;"><i class="fas fa-user-plus"></i> <b>Sign Up</b></a>
     </center>
     <?php endif;?>
   </div>
